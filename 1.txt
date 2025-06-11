@@ -1,0 +1,28 @@
+import React, { useState } from 'react'; 
+import './App.css'; 
+function App() { 
+const [text, setText] = useState('');           
+const handleInputChange = (event) => {              
+setText(event.target.value); 
+}; 
+return ( 
+<div className="container" > 
+<h1> Hello VCET</h1> 
+<input type="text" 
+value={text}           
+onChange={handleInputChange}         
+placeholder="Type something..." 
+/> 
+// Update state on input change 
+<h1>{text || "Type something..."}</h1> 
+</div> 
+); 
+} 
+export default App; 
+
+
+App.CSS 
+.container { 
+text-align: center; 
+margin-top: 50px; 
+} 
