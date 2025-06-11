@@ -1,0 +1,56 @@
+import React from 'react'; 
+function Header(props) { 
+return ( 
+<header> 
+<h1>{props.title}</h1>   {/* Display the title passed via props */} 
+</header> 
+); 
+} 
+export default Header; 
+
+import React from 'react'; 
+function Footer(props) { 
+return ( 
+<footer> 
+<p>{props.tagline}</p>      
+<small>{props.copyright}</small>       
+</footer> 
+); 
+} 
+export default Footer; 
+
+App.js 
+import React from 'react'; 
+import './App.css'; 
+import Header from './Header'; 
+import Footer from './Footer'; 
+function App() { 
+const title = "Welcome to React World"; 
+const tagline = "Code. Create. Innovate."; 
+const copyright = "© 2025 Creative Coders Ltd."; 
+return ( 
+<div className="App"> 
+<Header title={title} /> 
+<Footer tagline={tagline} copyright={copyright} /> 
+</div> 
+); 
+} 
+export default App; 
+
+.App { 
+text-align: center; 
+font-family: Arial, sans-serif; 
+} 
+header { 
+background-color:slategray; 
+color: white; 
+padding: 20px; 
+} 
+footer { 
+background-color:slategray; 
+color: white; 
+padding: 10px; 
+position: fixed;   
+width: 100%; 
+bottom: 0; 
+} 
